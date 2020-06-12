@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% block body %}
+<div class="form">
+  <h2 class="text-center">
+    Search For A Meal
+  </h2>
+  <form action="/" method="post">
+    <input type="text" name="meal" id="" class="myfield" />
+    <input type="submit" value="Search" class="mybtn text-center" />
+  </form>
+</div>
+
+<div class="results">
+  {% if results %}
+  <h3 class="text-center">Results For:</h3>
+  {% endif %}
+
+  <div class="result-list">
+    <div class="res">
+      <img src="" class="res-img" alt="res imAge" />
+      <h3>Lorem Ipsum</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        perferendis?
+      </p>
+      <br />
+      <a href="/details" class="mybtn">Details</a>
+    </div>
+    <div class="res">
+      <img src="" class="res-img" alt="res imAge" />
+      <h3>Lorem Ipsum</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        perferendis?
+      </p>
+      <br />
+      <a href="/details" class="mybtn">Details</a>
+    </div>
+    <div class="res">
+      <img src="" class="res-img" alt="res imAge" />
+      <h3>Lorem Ipsum</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        perferendis?
+      </p>
+      <br />
+      <a href="/details" class="mybtn">Details</a>
+    </div>
+    <div class="res">
+      <img src="" class="res-img" alt="res imAge" />
+      <h3>Lorem Ipsum</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        perferendis?
+      </p>
+      <br />
+      <a href="/details" class="mybtn">Details</a>
+    </div>
+  </div>
+</div>
+{% endblock body %}

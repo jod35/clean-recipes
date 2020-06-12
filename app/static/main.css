@@ -1,0 +1,112 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  background-color: rgb(74, 136, 12);
+  height: 80px;
+  padding: 10px;
+}
+
+.logo {
+  padding: 20px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header ul {
+  padding: 20px;
+}
+
+header li a {
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.form {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  height: 20vh;
+  padding: 2%;
+  color: rgb(74, 136, 12);
+  text-align: center;
+}
+.myfield {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 2rem;
+  color: rgb(74, 136, 12);
+  text-align: center;
+  border-bottom: 1px solid rgb(74, 136, 12);
+}
+
+.mybtn {
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(74, 136, 12);
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.mybtn:hover {
+  color: rgb(74, 136, 12);
+  background-color: white;
+  border: 2px solid rgb(74, 136, 12);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.results {
+  min-height: 100vh;
+  padding: 20px;
+}
+.result-list {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.res {
+  width: 30%;
+}
+
+.details {
+  padding: 20px;
+  margin-top: 100px;
+}
+.res-dimg {
+  position: fixed;
+  height: 20%;
+  background-color: rgb(74, 136, 12);
+}
+.res-details {
+  width: 80%;
+  margin-left: auto;
+}

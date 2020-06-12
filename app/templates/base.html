@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/main.css" />
+    <title>Recipes |{{title}}</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">Clean Recipes</h2>
+      <ul class="nav-bar">
+        <li>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+        </li>
+      </ul>
+    </header>
+
+    <div class="main">
+      {% block body %} {% endblock body %}
+    </div>
+    <footer class="text-center">
+      <p>Ssali Jonathan &copy; 2020</p>
+    </footer>
+    <script src="../static/index.js"></script>
+  </body>
+</html>
