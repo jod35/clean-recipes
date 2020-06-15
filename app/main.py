@@ -1,14 +1,39 @@
-from flask import Flask,render_template,redirect
+from flask import Flask, render_template, redirect, request
 import requests
+import os
 
-app=Flask(__name__)
 
-@app.route('/')
+url = "https://recipe-puppy.p.rapidapi.com/"
+
+app = Flask(__name__)
+
+
+headers = {
+    'x-rapidapi-host': "recipe-puppy.p.rapidapi.com",
+    'x-rapidapi-key': os.environ.get('API_KEY')
+}
+
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    context={
-        'results':""
+    results = ""
+    if request.method == "POST":
+        meal = request.form['meal']
+
+        queryString = {"q": meal}
+
+        response = requests.get(url=url, headers=headers, params=queryString)
+
+        results = response.json()
+
+        # return results
+
+    context = {
+        'results': results,
+
     }
-    return render_template('index.html',**context)
+    return render_template('index.html', **context)
+
 
 @app.route('/details')
 def details():

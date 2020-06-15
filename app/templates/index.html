@@ -10,51 +10,23 @@
 </div>
 
 <div class="results">
-  {% if results %}
-  <h3 class="text-center">Results For:</h3>
-  {% endif %}
-
   <div class="result-list">
+    {% for r in results.results %}
     <div class="res">
-      <img src="" class="res-img" alt="res imAge" />
-      <h3>Lorem Ipsum</h3>
+      <img
+        src="{{r.thumbnail}}"
+        class="res-img"
+        alt="Meal Image Not Available"
+      />
+      <h3>{{r.title}}</h3>
+      <h4>Ingredients:</h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-        perferendis?
+        {{r.ingredients}}
       </p>
       <br />
-      <a href="/details" class="mybtn">Details</a>
+      <a href="{{r.href}}" class="resbtn">RECIPES</a>
     </div>
-    <div class="res">
-      <img src="" class="res-img" alt="res imAge" />
-      <h3>Lorem Ipsum</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-        perferendis?
-      </p>
-      <br />
-      <a href="/details" class="mybtn">Details</a>
-    </div>
-    <div class="res">
-      <img src="" class="res-img" alt="res imAge" />
-      <h3>Lorem Ipsum</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-        perferendis?
-      </p>
-      <br />
-      <a href="/details" class="mybtn">Details</a>
-    </div>
-    <div class="res">
-      <img src="" class="res-img" alt="res imAge" />
-      <h3>Lorem Ipsum</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-        perferendis?
-      </p>
-      <br />
-      <a href="/details" class="mybtn">Details</a>
-    </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock body %}
