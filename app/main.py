@@ -7,6 +7,8 @@ url = "https://recipe-puppy.p.rapidapi.com/"
 
 app = Flask(__name__)
 
+base_dir = os.path.abspath(__file__)
+
 
 headers = {
     'x-rapidapi-host': "recipe-puppy.p.rapidapi.com",
@@ -26,7 +28,7 @@ def index():
 
         results = response.json()
 
-        # return results
+        print(base_dir)
 
     context = {
         'results': results,
@@ -38,3 +40,8 @@ def index():
 @app.route('/details')
 def details():
     return render_template('details.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
