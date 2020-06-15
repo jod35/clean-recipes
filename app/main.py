@@ -12,7 +12,7 @@ base_dir = os.path.abspath(__file__)
 
 headers = {
     'x-rapidapi-host': "recipe-puppy.p.rapidapi.com",
-    'x-rapidapi-key': "00d077979fmsh387d90cf6e84a47p1c658fjsn75203996af2d"
+    'x-rapidapi-key': os.environ.get('API_KEY')
 }
 
 
